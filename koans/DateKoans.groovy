@@ -26,30 +26,8 @@ class DateKoans extends Koans {
 		assert __ == date.hours
 		assert __ == date.minutes
 	}
-	
-	void testCreateDateFromCalendar() {
-		def cal = Calendar.instance
-		cal.set(year: 2001, month: SEPTEMBER, date: 11, hourOfDay: 0, minute: 0, second: 0)
-		assert __ == cal.class.name
-		assert __ == cal.time.class.name
-		def date = cal.time
-		assert __ == date.year
-		assert __ == date.month
-		assert __ == date.date
-		assert __ == date.hours
-		assert __ == date.minutes
-	}
-	
-	void testDateSetter() {
-		def date = new Date()
-		date.set(hourOfDay: 0, minute: 0, second: 0, year: 2001, month: SEPTEMBER, date: 11)
-		assert __ == date.class.name
-		assert __ == date.year
-		assert __ == date.month
-		assert __ == date.date
-		assert __ == date.hours
-		assert __ == date.minutes
 		
+	void testDateSetter() {
 		def date2 = new Date()
 		date2.year = 101
 		date2.month = SEPTEMBER
