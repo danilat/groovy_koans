@@ -26,7 +26,7 @@ class DateKoans extends Koans {
 		assert __ == date.hours
 		assert __ == date.minutes
 	}
-		
+	
 	void testDateSetter() {
 		def date2 = new Date()
 		date2.year = 101
@@ -61,50 +61,11 @@ class DateKoans extends Koans {
 		assert __ == date[SECOND]
 	}
 	
-	void testDateFieldAccessLikeGetter() {
-		def date = new Date(year: 101, month: SEPTEMBER, date: 11, hours:0, minutes: 0, seconds: 0)
-		assert __ == date.year
-		assert __ == date.month
-		assert __ == date.date
-		assert __ == date.hours
-		assert __ == date.minutes
-		assert __ == date.seconds
-	}
-	
 	void testDateStringGetters() {
 		def date = new Date(year: 41, month: DECEMBER, date: 07, hours:7, minutes: 55, seconds: 0)
 		assert __ == date.dateString	
 		assert __ == date.timeString 
 		assert __ == date.dateTimeString
-	}
-	
-	
-	// Date Math
-	void testDateMath() {
-		def date = new Date(year: 101, month: SEPTEMBER, date: 11, hours:0, minutes: 0, seconds: 0)
-		def datePlusOne = date + 1
-		def dateMinusOne = date - 1
-		assert __ == datePlusOne.year
-		assert __ == datePlusOne.month
-		assert __ == datePlusOne.date
-		assert __ == datePlusOne.hours
-		assert __ == datePlusOne.minutes
-		assert __ == datePlusOne.seconds
-		
-		assert __ == dateMinusOne.year
-		assert __ == dateMinusOne.month
-		assert __ == dateMinusOne.date
-		assert __ == dateMinusOne.hours
-		assert __ == dateMinusOne.minutes
-		assert __ == dateMinusOne.seconds
-		
-		def dateIncrement = ++date
-		assert __ == dateIncrement.year
-		assert __ == dateIncrement.month
-		assert __ == dateIncrement.date
-		assert __ == dateIncrement.hours
-		assert __ == dateIncrement.minutes
-		assert __ == dateIncrement.seconds
 	}
 	
 	// Compare Dates
